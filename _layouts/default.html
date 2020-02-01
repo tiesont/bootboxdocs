@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Bootbox.js - alert, confirm, prompt, and flexible dialogs for the Bootstrap framework" />
+    <meta name="keywords" content="Bootstrap,bootbox,modal" />
+    
+    <title>{{ page.title }} &mdash; Bootbox.js &mdash; alert, confirm, prompt, and flexible dialogs for the Bootstrap framework</title>
+    
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Bree+Serif&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./assets/css/prism.css" />
+    <link rel="stylesheet" href="./assets/css/main.css" />
+    <link rel="stylesheet" href="./assets/css/fontawesome.css" />
+    {% if page.pageKey == "examples" %}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.min.css" />
+    {% endif %}
+</head>
+<body>
+    <div class="page-wrapper toggled">
+        {% include navigation.html %}
+
+        <main class="page-content">            
+            <div class="container-fluid">
+                {% include breadcrumb.html %}
+                
+                <div class="d-flex flex-row py-3 align-items-stretch">
+                    <article class="main-content px-4 mx-auto">
+                        <div class="main-content-inner">
+                            {{ content }}
+                        </div>
+                    </article>
+
+                    {% include rightbar.html %}
+                </div>
+            </div>
+        </main>
+
+        <footer class="page-content">
+            <div class="container-fluid">
+                <div class="border-top py-3 px-4">
+                    Bootbox.js &copy; 2011 - {{ 'now' | date: "%Y" }} <a href="http://paynedigital.com/about" class="text-bb-brand">Nick Payne</a>. 
+                    Syntax highlighting by <a href="https://prismjs.com/" class="text-bb-brand">Prism.js</a> 
+                    using <a href="https://andrewlock.net" class="text-bb-brand">Andrew Lock</a>'s Visual Studio theme.
+                </div>
+            </div>
+        </footer>
+    </div>
+    <div class="bb-scroll-widget">
+        <a href="#" class="back-to-top">
+            <span class="fa-stack">
+                <i class="fas fa-square fa-stack-2x"></i>
+                <i class="fas fa-arrow-up fa-stack-1x fa-inverse"></i>
+            </span>
+        </a>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.2.2/anchor.min.js" integrity="sha256-E4RlfxwyJVmkkk0szw7LYJxuPlp6evtPSBDlWHsYYL8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
+    <script src="./assets/js/bootbox.all.min.js"></script>
+    <script src="./assets/js/prism.js"></script>
+    <script src="./assets/js/main.js"></script>
+    {% if page.pageKey == "examples" %}
+    <script src="./assets/js/example.js"></script>
+    <script src="./assets/js/demos.js"></script>
+    {% endif %}  
+    {% include search-lunr.html %}
+</body>
+
+</html>

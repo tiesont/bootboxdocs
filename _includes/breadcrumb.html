@@ -1,0 +1,37 @@
+<nav class="d-flex flex-row align-items-center p-3 border-bottom bg-white">
+    <div class="">
+        <a id="toggle-sidebar" class="btn rounded-0 p-3" href="#">
+            <i class="fas fa-bars"></i>
+        </a>
+    </div>
+    <div class="flex-fill">
+        <nav aria-label="breadcrumb" class="align-items-center">
+            <a href="./" class="text-no-hover"><b class="text-brand">Bootbox</b><span class="text-bb-alt text-thin mr-2">.js</span></a> &mdash; alert, confirm, prompt, and flexible dialogs for the Bootstrap framework
+        </nav>
+    </div>
+    <div class="text-right text-nowrap">          
+        <nav class="nav nav-navbar">
+            <div class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="revisions" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    v{{site.version}}
+                </a>
+                <div class="dropdown-menu" aria-labelledby="revisions">
+                    <a class="dropdown-item active" href="./documentation.html">v{{site.version}}</a>
+                    {% for link in site.versions %}
+                    <a class="dropdown-item" href="{{link}}/documentation.html">{{link}}</a>
+                    {% endfor %}
+                </div>
+              </div>
+            <a class="nav-item nav-link text-dark mr-3" href="https://github.com/makeusabrew/bootbox">
+                <i class="fab fa-github"></i>
+                GitHub
+            </a>
+            <div class="form-inline">
+                <a class="btn btn-brand" href="https://github.com/makeusabrew/bootbox/releases/download/v{{site.version}}/bootbox.zip" id="download-bootbox">
+                    <i class="fas fa-download"></i>
+                    Download
+                </a>
+            </div>
+        </nav>
+    </div>
+</nav>

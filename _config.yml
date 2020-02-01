@@ -1,0 +1,12 @@
+baseurl: ""
+url: "http://bootboxjs.com"
+twitter_username: "@makeusabrew"
+github_username:  "@makeusabrew"
+
+version: 5.4.0
+versions:
+  - v4.x
+  - v3.x
+
+plugins:
+  - jekyll-last-modified-at
