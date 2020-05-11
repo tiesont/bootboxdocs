@@ -22,7 +22,7 @@ def build_index
     i = 1
     index_json = File.new(index_path, 'w')
 
-    # Load and parse all includes for the documentation page
+    # Load and parse all includes for the documentation page and the F.A.Q. page
     dirs = ['documentation', 'faq']
     dirs.each do |path|
         docs = Array.new

@@ -32,6 +32,17 @@
     console.log('This was logged in the callback!'); 
 });</code></pre>
                     </dd>
+                    <dt id="alert-html-callback" class="bb-anchor h5">Basic usage, using HTML element, with callback</dt>
+                    <dd class="bb-example">
+                        <p>
+                            <button type="button" class="btn btn-primary example-button" data-bb-example-key="alert-html-callback">Run example</button>
+                        </p>
+                        <pre class="language-js line-numbers"><code>let template = $('#alert-message-template');
+                            
+bootbox.alert(template, function () {
+    console.log('This was logged in the callback!');
+});</code></pre>
+                    </dd>
                     <dt id="alert-basic-options" class="bb-anchor h5">Basic usage, using options object</dt>
                     <dd class="bb-example">
                         <p>

@@ -27,6 +27,13 @@ $(function () {
             Example.show('Default alert');
             break;
 
+          case 'alert-html-callback':
+            var template = $('#alert-message-template');
+            bootbox.alert(template, function () {
+              Example.show('This was logged in the callback!');
+            });
+            break;
+
           case 'alert-callback':
             bootbox.alert("This is an alert with a callback!", function () {
               Example.show('This was logged in the callback!');

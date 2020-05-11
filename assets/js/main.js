@@ -24,15 +24,14 @@ function highlightTarget() {
 }
 
 try {
-    // Anchor.js --> add clickable page anchors to elements labeled with the `bb-anchor` class
-    if(anchors){
+    // Anchor.js --> add clickable page anchors to elements labeled with the `topic-anchor` class
+    if(anchors) {
         anchors.options = {
             placement: 'left',
-            visible: 'hover',
-            icon: '#'
+            visible: 'hover'
         };
         
-        anchors.add('.bb-anchor');
+        anchors.add('.topic-anchor');
     }
 }
 catch(error) {
@@ -59,8 +58,8 @@ $(window)
             var target = $(hash);
             if (target) {
                 // If the target exists, scroll it into place (taking into account the header spacing) and set the active nav item
-                if (target.scrollTop() < 25) {
-                    $('html, body').stop().animate({ scrollTop: (target.offset().top - 25) }, 'slow');
+                if (target.scrollTop() < 75) {
+                    $('html, body').stop().animate({ scrollTop: (target.offset().top - 100) }, 'slow');
                 }
             }
         }
@@ -70,7 +69,7 @@ $(window)
 
 jQuery(function ($) {
     // Prevent scrolling for "empty" (i.e. href="#") page anchors
-    $('a[href="#"]').on('click', function(e){
+    $('a[href="#"]').on('click', function(e) {
         e.preventDefault();
     }); 
 
@@ -92,7 +91,7 @@ jQuery(function ($) {
                 if ($(target).length) {
                     e.preventDefault();
 
-                    $('html, body').stop().animate({ scrollTop: $(target).offset().top - 25 }, 'slow', function () {
+                    $('html, body').stop().animate({ scrollTop: $(target).offset().top - 100 }, 'slow', function () {
                         if (hasPushState) {
                             history.pushState(null, null, target);
                         }
@@ -106,13 +105,13 @@ jQuery(function ($) {
             var _this = $(this);
             var url = _this.attr('href').split('#');
 
-            if(url[0] && url[0].indexOf(window.location.pathname) !== -1){
+            if(url[0] && url[0].indexOf(window.location.pathname) !== -1) {
                 var target = this.hash;
                 if (target) {
                     if ($(target).length) {
                         e.preventDefault();
 
-                        $('html, body').stop().animate({ scrollTop: $(target).offset().top - 25 }, 'slow', function () {
+                        $('html, body').stop().animate({ scrollTop: $(target).offset().top - 100 }, 'slow', function () {
                             $('.nav-link').removeClass('active');
                             _this.addClass('active');
 
@@ -141,30 +140,30 @@ jQuery(function ($) {
         $(this).parent().toggleClass('open');
     });
 
-    $('.nav-items .nav-link').on('click', function(e){
+    $('.nav-items .nav-link').on('click', function(e) {
         $('.nav-link').not(this).toggleClass('active', false);
         $(this).toggleClass('active', true);
     });
 
     //toggle sidebar
     $('#toggle-sidebar').on('click', function () {
-        $('.page-wrapper').toggleClass('toggled');
+        $('body').toggleClass('toggled');
     });
 
     //Pin sidebar
     $('#pin-sidebar').on('click', function () {
-        if ($('.page-wrapper').hasClass('pinned')) {
+        if ($('body').hasClass('pinned')) {
             // unpin sidebar when hovered
-            $('.page-wrapper').removeClass('pinned');
+            $('body').removeClass('pinned');
             $('#sidebar').unbind( 'hover');
         } else {
-            $('.page-wrapper').addClass('pinned');
+            $('body').addClass('pinned');
             $('#sidebar').hover(
                 function () {
-                    $('.page-wrapper').addClass('sidebar-hovered');
+                    $('body').addClass('sidebar-hovered');
                 },
                 function () {
-                    $('.page-wrapper').removeClass('sidebar-hovered');
+                    $('body').removeClass('sidebar-hovered');
                 }
             );
         }
@@ -173,6 +172,6 @@ jQuery(function ($) {
 
     //toggle sidebar overlay
     $('#overlay').on('click', function () {
-        $('.page-wrapper').toggleClass('toggled');
+        $('body').toggleClass('toggled');
     });
 });

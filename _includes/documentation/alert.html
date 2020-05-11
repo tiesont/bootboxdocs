@@ -16,7 +16,7 @@
                     This is the simplest usage of Bootbox, requiring only the text of the message you wish to show.
                 </p>
                 <div class="bb-example bb-example-modal">
-                    <pre class="language-js line-numbers"><code>bootbox.alert("Your message here&hellip;")</code></pre>
+                    <pre class="language-js line-numbers"><code>bootbox.alert('Your message here&hellip;');</code></pre>
                     <figure>
                         <figcaption id="example-bb-1" class="topic-anchor">Example <b>bb.1</b></figcaption>
                         <div class="bb-modal-dialog">
@@ -36,13 +36,13 @@
                     If you have code that should not be evaluated until the user has dismissed the alert
                     (see <a href="#note-non-blocking">Bootbox Limitations</a> below), call it within the callback function:
                 </p>
-                <pre class="language-js line-numbers mb-4"><code>bootbox.alert("Your message here&hellip;", function(){
+                <pre class="language-js line-numbers mb-4"><code>bootbox.alert('Your message here&hellip;', function(){
     /* your callback code */ 
-})</code></pre>
-                <h4>Formatted text</h4>
+});</code></pre>
+                <h4 id="alert-formatted-text" class="topic-anchor">Formatted text</h4>
                 <p>Your message can also contain HTML. <sup><a href="#note-html"><i class="fas fa-exclamation-triangle text-danger"></i></a></sup></p>
                 <div class="bb-example bb-example-modal">
-                    <pre class="language-js line-numbers"><code>bootbox.alert("Your message &lt;b&gt;here&hellip;&lt;/b&gt;")</code></pre>
+                    <pre class="language-js line-numbers"><code>bootbox.alert('Your message &lt;b&gt;here&hellip;&lt;/b&gt;');</code></pre>
                     <figure>
                         <figcaption id="example-bb-2" class="topic-anchor">Example <b>bb.2</b></figcaption>
                         <div class="bb-modal-dialog">
@@ -97,7 +97,7 @@
     title: 'Your Title',
     message: 'Your message here&hellip;',
     callback: function(){ /* your callback code */ }
-})</code></pre>
+});</code></pre>
                     <figure>
                         <figcaption id="example-bb-3" class="topic-anchor">Example <b>bb.3</b></figcaption>
                         <div class="bb-modal-dialog bb-modal-sm">

@@ -4,7 +4,8 @@
     </header>
     <div class="topic-content">
         <p>
-            Bootbox dialogs can be configured using the options below.
+            The options shown below apply to all Bootbox dialogs. Options which are specific to prompt 
+            dialogs can be found <a href="#prompt-options">above</a>.
         </p>
         <dl class="options-list">
             <dt id="option-message" class="topic-subsection-header topic-anchor h4">message</dt>
@@ -17,7 +18,7 @@
                     <span class="meta-info">Default:</span> <code>null</code>
                 </p>
                 <p class="mb-2">
-                    <span class="badge badge-danger p-3">
+                    <span class="badge badge-danger p-2">
                         Required for alert, confirm, and custom dialogs
                     </span>
                 </p>
@@ -37,7 +38,7 @@
                     <span class="meta-info">Default:</span> <code>null</code>
                 </p>
                 <p class="mb-2">
-                    <span class="badge badge-danger p-3">Required for prompt</span>
+                    <span class="badge badge-danger p-2">Required for prompt</span>
                 </p>
                 <p>
                     Adds a header to the dialog and places this text
@@ -56,10 +57,10 @@
                     <span class="meta-info">Default:</span> <code>null</code>
                 </p>
                 <p class="mb-2">
-                    <span class="badge badge-danger p-3">
+                    <span class="badge badge-danger p-2">
                         Required for confirm and prompt
                     </span>
-                    <span class="badge badge-info p-3">
+                    <span class="badge badge-info p-2">
                         Not called for custom dialogs
                     </span>
                 </p>
@@ -77,13 +78,13 @@
                     <samp>true</samp> or <samp>false</samp> value, while the prompt result will hold the
                     value(s) entered by the user:
                 </p>
-                <pre class="language-js line-numbers"><code>bootbox.confirm("Are you sure?", function(result) {
+                <pre class="language-js line-numbers"><code>bootbox.confirm('Are you sure?', function(result) {
     // result will be true or false
 });</code></pre>
                 <p>
                     or
                 </p>
-                <pre class="language-js line-numbers"><code>bootbox.prompt("What is your name?", function(result) {
+                <pre class="language-js line-numbers"><code>bootbox.prompt('What is your name?', function(result) {
     if (result === null) {
         // Prompt dismissed
     } else {
@@ -95,7 +96,7 @@
                     as the last line of the callback. You will then need to manually dismiss the dialog using
                     the <samp>modal()</samp> function or <samp>bootbox.hideAll()</samp>:
                 </p>
-                <pre class="language-js line-numbers"><code>let dialog = bootbox.prompt("What is your name?", function(result) {
+                <pre class="language-js line-numbers"><code>let dialog = bootbox.prompt('What is your name?', function(result) {
     if (result === null) {
         // Prompt dismissed
     } else {
@@ -391,7 +392,7 @@
                 <p>
                     Buttons are defined as JavaScript objects. The minimum shortform requirement to define a button is:
                 </p>
-                <pre class="language-js line-numbers"><code>"Your button text": function() { }</code></pre>
+                <pre class="language-js line-numbers"><code>'Your button text': function() { }</code></pre>
                 <p>
                     The complete definition of a button object is:
                 </p>
@@ -434,7 +435,7 @@
                     and CSS styles. For example:
                 </p>
                 <pre class="language-js line-numbers"><code>bootbox.confirm({
-    message: "This is a confirm with custom button text and color! Do you like it?",
+    message: 'This is a confirm with custom button text and color! Do you like it?',
     buttons: {
         confirm: {
             label: 'Yes',

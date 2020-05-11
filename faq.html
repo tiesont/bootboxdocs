@@ -8,17 +8,16 @@ pageKey: faq
 <p class="lead">
     Bootbox.js is designed to be relatively easy to use, but there are some known issues and frequently asked questions, as noted here.
 </p>
+<div class="bg-white p-5">
+    {% include faq/non-blocking.html %}
 
-<hr class="section-divider" />
+    {% include faq/prevent-page-submit.html %}
 
-{% include faq/non-blocking.html %}
+    {% include faq/prompt-require-value.html %}
 
-{% include faq/prevent-page-submit.html %}
+    {% include faq/adding-locales.html %}
 
-{% include faq/prompt-require-value.html %}
+    {% include faq/layout-issues.html %}
 
-{% include faq/adding-locales.html %}
-
-{% include faq/layout-issues.html %}
-
-{% include faq/package-warnings.html %}
+    {% include faq/package-warnings.html %}
+</div>

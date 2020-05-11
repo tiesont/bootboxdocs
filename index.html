@@ -30,23 +30,22 @@ pageKey: index
     </div>
 </header>
 
-<hr class="section-divider" />
-
-<section class="page-section">
-    <h3 class="page-section-header mb-3">Flexible Bootstrap-style dialogs</h3>
-    <div class="mb-4">
+<div class="bg-white p-5">
+    <section class="page-section">
+        <h3 class="page-section-header mb-3">Flexible Bootstrap-style dialogs</h3>
+        <div class="mb-4">
+            <p>
+                Bootbox provides three functions, <samp>alert()</samp>, <samp>confirm()</samp>, and <samp>prompt()</samp>, whose aim is to
+                mimic their native JavaScript equivalents. Here&rsquo;s the simplest possible example:
+            </p>
+            <pre class="language-js line-numbers"><code>bootbox.alert(<span class="bb-code-string">"Hello&nbsp;world!"</span>);</code></pre>        
+            <button type="button" class="bb-hello-world btn btn-primary btn-lg">Run example</button>
+        </div>
         <p>
-            Bootbox provides three functions, <samp>alert()</samp>, <samp>confirm()</samp>, and <samp>prompt()</samp>, whose aim is to
-            mimic their native JavaScript equivalents. Here&rsquo;s the simplest possible example:
+            <b>Compare that to the code you&rsquo;d have to write without Bootbox:</b>
         </p>
-        <pre class="language-js line-numbers"><code>bootbox.alert(<span class="bb-code-string">"Hello&nbsp;world!"</span>);</code></pre>        
-        <button type="button" class="bb-hello-world btn btn-primary btn-lg">Run example</button>
-    </div>
-    <p>
-        <b>Compare that to the code you&rsquo;d have to write without Bootbox:</b>
-    </p>
-    <div class="mb-4">
-        <pre class="language-html line-numbers"><code>&lt;!-- set up the modal to start hidden and fade in and out --&gt;
+        <div class="mb-4">
+            <pre class="language-html line-numbers"><code>&lt;!-- set up the modal to start hidden and fade in and out --&gt;
 &lt;div id="myModal" class="modal fade"&gt;
     &lt;div class="modal-dialog"&gt;
         &lt;div class="modal-content"&gt;
@@ -84,22 +83,23 @@ pageKey: index
         "show"      : true                              // ensure the modal is shown immediately
     });
 &lt;/script&gt;</code></pre>
-    </div>
-    <h3 class="page-section-header mb-3">Build Your Own Dialogs!</h3>
-    <p>
-        Each Bootbox function calls a fourth public function, <samp>dialog()</samp>,
-        which you can use to create your own custom dialogs. See the <a href="./documentation.html">Documentation</a>
-        page for usage and to learn which options are available for each function.
-    </p>
-</section>
-
-<hr class="section-divider" />
-
-<section class="page-section">
-    <h3 class="page-section-header mb-3">Ready To Get Started?</h3>
-    <p>
-        Head on over to the <a href="./getting-started.html">Getting Started</a> page, where you'll find the information
-        you need to start using Bootbox, including the versions of Bootstrap we support and options for adding
-        Bootbox to your project.
-    </p>
-</section>
+        </div>
+        <h3 class="page-section-header mb-3">Build Your Own Dialogs!</h3>
+        <p>
+            Each Bootbox function calls a fourth public function, <samp>dialog()</samp>,
+            which you can use to create your own custom dialogs. See the <a href="./documentation.html">Documentation</a>
+            page for usage and to learn which options are available for each function.
+        </p>
+    </section>
+    
+    <hr class="section-divider" />
+    
+    <section class="page-section">
+        <h3 class="page-section-header mb-3">Ready To Get Started?</h3>
+        <p>
+            Head on over to the <a href="./getting-started.html">Getting Started</a> page, where you'll find the information
+            you need to start using Bootbox, including the versions of Bootstrap we support and options for adding
+            Bootbox to your project.
+        </p>
+    </section>
+</div>

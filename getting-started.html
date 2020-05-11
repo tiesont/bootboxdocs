@@ -9,94 +9,93 @@ pageKey: gettingStarted
     Bootbox.js is designed to make using Bootstrap modals easier! Follow the guide below, and you should be up and running in no time.
 </p>
 
-<hr class="section-divider" />
-
-<section class="page-section">
-    <!-- heading -->
-    <h3 id="install" class="page-section-header page-anchor">
-        Install
-    </h3>
-    <div class="page-section-content">
-        <p>Bootbox can be added to your project in two easy ways:</p>
-        <div class="row mb-3">
-            <div class="col">
-                <h4><a href="https://www.npmjs.com/package/bootbox">npm</a></h4>
-                <pre><code class="language-bash">npm i bootbox</code></pre>
+<div class="bg-white p-5">
+    <section class="page-section">
+        <!-- heading -->
+        <h3 id="install" class="page-section-header page-anchor">
+            Install
+        </h3>
+        <div class="page-section-content">
+            <p>Bootbox can be added to your project in two easy ways:</p>
+            <div class="row mb-3">
+                <div class="col">
+                    <h4><a href="https://www.npmjs.com/package/bootbox">npm</a></h4>
+                    <pre><code class="language-bash">npm i bootbox</code></pre>
+                </div>
+                <div class="col">
+                    <h4><a href="https://cdnjs.com/libraries/bootbox.js">cdnjs</a></h4>
+                    <pre><code class="language-http">https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/{{site.version}}/bootbox.min.js</code></pre>
+                </div>
             </div>
-            <div class="col">
-                <h4><a href="https://cdnjs.com/libraries/bootbox.js">cdnjs</a></h4>
-                <pre><code class="language-http">https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/{{site.version}}/bootbox.min.js</code></pre>
+            <p>Or, serve the files yourself:</p>
+            <div class="mb-2">
+                <h5 class="text-left">
+                    Direct download
+                    <small>(via <a href="https://github.com/makeusabrew/bootbox">GitHub</a> &mdash; please do not link to these files directly)</small>
+                </h5>
+                <table class="table table-bordered w-75">
+                    <thead>
+                        <tr>
+                            <th style="width: 50%;">Production:</th>
+                            <th>Development:</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <a href="https://github.com/makeusabrew/bootbox/releases/download/v{{site.version}}/bootbox.js">
+                                    bootbox.js
+                                </a>
+                                <small class="d-block">bootbox + default locale (<samp>en</samp>) only.</small>
+                            </td>
+                            <td>
+                                <a href="https://github.com/makeusabrew/bootbox/releases/download/v{{site.version}}/bootbox.min.js">
+                                    bootbox.min.js
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="https://github.com/makeusabrew/bootbox/releases/download/v{{site.version}}/bootbox.locales.js">
+                                    bootbox.locales.js
+                                </a>
+                                <small class="d-block">Contains only locales.</small>
+                            </td>
+                            <td>
+                                <a href="https://github.com/makeusabrew/bootbox/releases/download/v{{site.version}}/bootbox.locales.min.js">
+                                    bootbox.locales.min.js
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="https://github.com/makeusabrew/bootbox/releases/download/v{{site.version}}/bootbox.all.js">
+                                    bootbox.all.js
+                                </a>
+                                <small class="d-block">Includes bootbox + all locales.</small>
+                            </td>
+                            <td>
+                                <a href="https://github.com/makeusabrew/bootbox/releases/download/v{{site.version}}/bootbox.all.min.js">
+                                    bootbox.all.min.js
+                                </a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
+            <p>
+                Once you've downloaded Bootbox, skip down to the <a href="#usage-instructions">Usage Instructions</a> for help setting up the library.
+            </p>
         </div>
-        <p>Or, serve the files yourself:</p>
-        <div class="mb-2">
-            <h5 class="text-left">
-                Direct download
-                <small>(via <a href="https://github.com/makeusabrew/bootbox">GitHub</a> &mdash; please do not link to these files directly)</small>
-            </h5>
-            <table class="table table-bordered w-75">
-                <thead>
-                    <tr>
-                        <th style="width: 50%;">Production:</th>
-                        <th>Development:</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>
-                            <a href="https://github.com/makeusabrew/bootbox/releases/download/v{{site.version}}/bootbox.js">
-                                bootbox.js
-                            </a>
-                            <small class="d-block">bootbox + default locale (<samp>en</samp>) only.</small>
-                        </td>
-                        <td>
-                            <a href="https://github.com/makeusabrew/bootbox/releases/download/v{{site.version}}/bootbox.min.js">
-                                bootbox.min.js
-                            </a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <a href="https://github.com/makeusabrew/bootbox/releases/download/v{{site.version}}/bootbox.locales.js">
-                                bootbox.locales.js
-                            </a>
-                            <small class="d-block">Contains only locales.</small>
-                        </td>
-                        <td>
-                            <a href="https://github.com/makeusabrew/bootbox/releases/download/v{{site.version}}/bootbox.locales.min.js">
-                                bootbox.locales.min.js
-                            </a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <a href="https://github.com/makeusabrew/bootbox/releases/download/v{{site.version}}/bootbox.all.js">
-                                bootbox.all.js
-                            </a>
-                            <small class="d-block">Includes bootbox + all locales.</small>
-                        </td>
-                        <td>
-                            <a href="https://github.com/makeusabrew/bootbox/releases/download/v{{site.version}}/bootbox.all.min.js">
-                                bootbox.all.min.js
-                            </a>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-        <p>
-            Once you've downloaded Bootbox, skip down to the <a href="#usage-instructions">Usage Instructions</a> for help setting up the library.
-        </p>
-    </div>
-</section>
+    </section>
 
-<hr class="section-divider" />
+    <hr class="section-divider" />
 
-<section class="page-section">
-    <h3 id="dependencies" class="page-section-header page-anchor">
-        Dependencies
-    </h3>
-    <div class="page-section-content">
+    <section class="page-section">
+        <h3 id="dependencies" class="page-section-header page-anchor">
+            Dependencies
+        </h3>
+        <div class="page-section-content">
         <p>
             All versions of Bootbox stand on the shoulders of two great giants: <a href="https://getbootstrap.com">Bootstrap</a> and <a href="https://jquery.com">jQuery</a>.
             The exact version of Bootstrap depends on the version of Bootbox you're using. This has become slightly more complex than we'd like, but hopefully this handy
@@ -168,22 +167,22 @@ pageKey: gettingStarted
             currently includes a bootstrap.bundle.min.js file in the pre-compiled version, if you prefer, which combines Popper.js with
             the bootstrap.js source file.
         </p>
-    </div>
-</section>
+        </div>
+    </section>
 
-<hr class="section-divider" />
+    <hr class="section-divider" />
 
-<section class="page-section">
-    <h3 id="usage-instructions" class="page-section-header page-anchor">
-        Usage Instructions
-    </h3>
-    <div class="page-section-content">
-        <p>
-            Once you&rsquo;ve got your <a href="#dependencies">dependencies</a> sorted, usage
-            is fairly straightforward and much like any other JavaScript library you&rsquo;ve
-            ever used. The library creates a single global instance of a <samp>bootbox</samp> object:
-        </p>
-        <pre class="language-html line-numbers mb-4"><code>&lt;!DOCTYPE html&gt;
+    <section class="page-section">
+        <h3 id="usage-instructions" class="page-section-header page-anchor">
+            Usage Instructions
+        </h3>
+        <div class="page-section-content">
+            <p>
+                Once you&rsquo;ve got your <a href="#dependencies">dependencies</a> sorted, usage
+                is fairly straightforward and much like any other JavaScript library you&rsquo;ve
+                ever used. The library creates a single global instance of a <samp>bootbox</samp> object:
+            </p>
+            <pre class="language-html line-numbers mb-4"><code>&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
     &lt;meta charset="utf-8"&gt;
@@ -215,23 +214,24 @@ pageKey: gettingStarted
     &lt;/script&gt;
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
-        <h4 id="note-script-order" class="page-anchor">
-            <i class="fas fa-info-circle text-danger"></i>
-            Note the order of the script references
-        </h4>
-        <p>
-            Since Bootbox is a wrapper around Bootstrap's modal functionality, you need to include the libraries in order:
-        </p>
-        <ol>
-            <li>jQuery</li>
-            <li>Popper.js</li>
-            <li>Bootstrap</li>
-            <li>Bootbox</li>
-            <li>Bootbox Locales (optional - omit if you only need the default English locale)</li>
-        </ol>
-        <p>
-            When you're up and running, check out some <a href="./examples.html">examples</a>
-            or the <a href="./documentation.html">documentation</a>.
-        </p>
-    </div>
-</section>
+            <h4 id="note-script-order" class="page-anchor">
+                <i class="fas fa-info-circle text-danger"></i>
+                Note the order of the script references
+            </h4>
+            <p>
+                Since Bootbox is a wrapper around Bootstrap's modal functionality, you need to include the libraries in order:
+            </p>
+            <ol>
+                <li>jQuery</li>
+                <li>Popper.js</li>
+                <li>Bootstrap</li>
+                <li>Bootbox</li>
+                <li>Bootbox Locales (optional - omit if you only need the default English locale)</li>
+            </ol>
+            <p>
+                When you're up and running, check out some <a href="./examples.html">examples</a>
+                or the <a href="./documentation.html">documentation</a>.
+            </p>
+        </div>
+    </section>
+</div>

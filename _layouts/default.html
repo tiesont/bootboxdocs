@@ -5,7 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="Bootbox.js - alert, confirm, prompt, and flexible dialogs for the Bootstrap framework" />
-    <meta name="keywords" content="Bootstrap,bootbox,modal" />
+    <meta name="keywords" content="bootbox,Bootstrap,modal" />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png" />
+    <link rel="manifest" href="./site.webmanifest" />
     
     <title>{{ page.title }} &mdash; Bootbox.js &mdash; alert, confirm, prompt, and flexible dialogs for the Bootstrap framework</title>
     
@@ -18,28 +23,24 @@
     {% endif %}
 </head>
 <body>
-    <div class="page-wrapper toggled">
-        {% include navigation.html %}
+    <div class="page-wrapper">
+        {% include breadcrumb.html %}
 
         <main class="page-content">            
-            <div class="container-fluid">
-                {% include breadcrumb.html %}
-                
+            <div class="container-fluid">                
                 <div class="d-flex flex-row py-3 align-items-stretch">
                     <article class="main-content px-4 mx-auto">
                         <div class="main-content-inner">
                             {{ content }}
                         </div>
                     </article>
-
-                    {% include rightbar.html %}
                 </div>
             </div>
         </main>
 
         <footer class="page-content">
-            <div class="container-fluid">
-                <div class="border-top py-3 px-4">
+            <div class="text-center container-fluid">
+                <div class="p-4">
                     Bootbox.js &copy; 2011 - {{ 'now' | date: "%Y" }} <a href="http://paynedigital.com/about" class="text-bb-brand">Nick Payne</a>. 
                     Syntax highlighting by <a href="https://prismjs.com/" class="text-bb-brand">Prism.js</a> 
                     using <a href="https://andrewlock.net" class="text-bb-brand">Andrew Lock</a>'s Visual Studio theme.
@@ -47,6 +48,7 @@
             </div>
         </footer>
     </div>
+    {% include navigation.html %}
     <div class="bb-scroll-widget">
         <a href="#" class="back-to-top">
             <span class="fa-stack">
