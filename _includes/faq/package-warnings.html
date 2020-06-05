@@ -9,7 +9,7 @@
             <b class="text-brand font-weight-bold h4">A:</b> That's&hellip; unfortunate.
         </p>
         <p>
-            We're aware of at least one notice (via a HackerOne issue) on the npm package. Here's the gist: we use jQuery's
+            We're aware of at least one notice (via a <a href="https://hackerone.com/reports/508446">HackerOne issue</a>) on the npm package. Here's the gist: we use jQuery's
             <a href="https://api.jquery.com/html/"><samp>.html()</samp></a> as part of the construction of our modals. Because
             that process (in part) includes the values passed in via the <samp>title</samp> and <samp>message</samp> options, there's
             a possible XSS vector there, as we <b>do not</b> sanitize the content you pass in for those options. That's how Bootbox has

@@ -30,19 +30,19 @@ pageKey: index
     </div>
 </header>
 
-<div class="bg-white p-5">
+<div class="bg-white rounded p-5">
     <section class="page-section">
         <h3 class="page-section-header mb-3">Flexible Bootstrap-style dialogs</h3>
         <div class="mb-4">
             <p>
                 Bootbox provides three functions, <samp>alert()</samp>, <samp>confirm()</samp>, and <samp>prompt()</samp>, whose aim is to
-                mimic their native JavaScript equivalents. Here&rsquo;s the simplest possible example:
+                mimic their native JavaScript equivalents. Here's the simplest possible example:
             </p>
             <pre class="language-js line-numbers"><code>bootbox.alert(<span class="bb-code-string">"Hello&nbsp;world!"</span>);</code></pre>        
             <button type="button" class="bb-hello-world btn btn-primary btn-lg">Run example</button>
         </div>
         <p>
-            <b>Compare that to the code you&rsquo;d have to write without Bootbox:</b>
+            <b>Compare that to the code you'd have to write without Bootbox:</b>
         </p>
         <div class="mb-4">
             <pre class="language-html line-numbers"><code>&lt;!-- set up the modal to start hidden and fade in and out --&gt;
@@ -63,7 +63,7 @@ pageKey: index
 &lt;!-- sometime later, probably inside your on load event callback --&gt;
 &lt;script&gt;
     $("#myModal").on("show.bs.modal", function() {      // wire up the OK button to dismiss the modal when shown
-        $("#myModal a.btn").on("click", function(e) {
+        $("#myModal .modal-footer .btn").on("click", function(e) {
             console.log("button pressed");              // just as an example...
             $("#myModal").modal('hide');                // dismiss the dialog
         });

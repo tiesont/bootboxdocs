@@ -248,15 +248,17 @@ DD   = two-digit day of month (01 through 31)
                         The default <samp>step</samp> value for <samp>number</samp> inputs is <samp>1</samp> 
                         (<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/number#attr-step">MDN</a>).
                     </p>
-                    <p>
-                        <b>Warning:</b> For most browsers, date inputs are buggy in their implementation of <samp>step</samp>,
-                        so this attribute would likely have no effect. Therefore, we don't set the step attribute
-                        for date inputs.
-                    </p>
-                    <p>
-                        See <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/date#Setting_maximum_and_minimum_dates">the MDN article</a>
-                        for more information.
-                    </p>
+                    <div class="bs-callout bs-callout-warning">
+                        <p>
+                            <i class="fas fa-exclamation-triangle"></i> <b>Warning:</b> For most browsers, date inputs are buggy in their implementation of <samp>step</samp>,
+                            so this attribute would likely have no effect. Therefore, we don't set the step attribute
+                            for date inputs.
+                        </p>
+                        <p>
+                            See <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/date#Setting_maximum_and_minimum_dates">the MDN article</a>
+                            for more information.
+                        </p>
+                    </div>
                 </dd>
 
                 <dt id="prompt-option-input-maxlength" class="topic-anchor topic-subsection-header h4">maxlength</dt>

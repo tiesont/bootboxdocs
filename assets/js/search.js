@@ -7,7 +7,7 @@
     var $clearBtn = $('<button type="button" class="btn btn-clear"><i class="fas fa-times"></i> Clear results</button>');
 
     $(function(){
-        $.getJSON('/assets/data/index.json', function(json){
+        $.getJSON('./assets/data/index.json', function(json){
             docs = json;
 
             idx = lunr(function () {

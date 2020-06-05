@@ -314,7 +314,8 @@ pre[class*="language-"] {
     h4,
     .callout-heading
     {
-        margin-bottom: 5px;
+        font-weight: 700;
+        margin-bottom: 1rem;
         margin-top: 0;
     }
 
@@ -337,7 +338,11 @@ pre[class*="language-"] {
     {
         border-left-color: #ce4844;
 
-        .callout-heading
+        .far, 
+        .fas, 
+        .fab, 
+        .fad, 
+        .fal
         {
             color: #ce4844;
         }
@@ -347,7 +352,11 @@ pre[class*="language-"] {
     {
         border-left-color: #aa6708;
 
-        .callout-heading
+        .far, 
+        .fas, 
+        .fab, 
+        .fad, 
+        .fal
         {
             color: #aa6708;
         }
@@ -357,7 +366,11 @@ pre[class*="language-"] {
     {
         border-left-color: #1b809e;
         
-        .callout-heading
+        .far, 
+        .fas, 
+        .fab, 
+        .fad, 
+        .fal
         {
             color: #1b809e;
         }

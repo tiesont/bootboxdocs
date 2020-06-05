@@ -9,7 +9,7 @@ pageKey: gettingStarted
     Bootbox.js is designed to make using Bootstrap modals easier! Follow the guide below, and you should be up and running in no time.
 </p>
 
-<div class="bg-white p-5">
+<div class="bg-white rounded p-5">
     <section class="page-section">
         <!-- heading -->
         <h3 id="install" class="page-section-header page-anchor">
@@ -36,6 +36,7 @@ pageKey: gettingStarted
                 <table class="table table-bordered w-75">
                     <thead>
                         <tr>
+                            <th>File</th>
                             <th style="width: 50%;">Production:</th>
                             <th>Development:</th>
                         </tr>
@@ -43,10 +44,15 @@ pageKey: gettingStarted
                     <tbody>
                         <tr>
                             <td>
+                                Core
+                                <p>
+                                    <small class="d-block">bootbox + default locale (<samp>en</samp>) only.</small>
+                                </p>
+                            </td>
+                            <td>
                                 <a href="https://github.com/makeusabrew/bootbox/releases/download/v{{site.version}}/bootbox.js">
                                     bootbox.js
-                                </a>
-                                <small class="d-block">bootbox + default locale (<samp>en</samp>) only.</small>
+                                </a>                                
                             </td>
                             <td>
                                 <a href="https://github.com/makeusabrew/bootbox/releases/download/v{{site.version}}/bootbox.min.js">
@@ -56,10 +62,15 @@ pageKey: gettingStarted
                         </tr>
                         <tr>
                             <td>
+                                Locales
+                                <p>
+                                    <small class="d-block">Contains only locales.</small>
+                                </p>
+                            </td>
+                            <td>
                                 <a href="https://github.com/makeusabrew/bootbox/releases/download/v{{site.version}}/bootbox.locales.js">
                                     bootbox.locales.js
                                 </a>
-                                <small class="d-block">Contains only locales.</small>
                             </td>
                             <td>
                                 <a href="https://github.com/makeusabrew/bootbox/releases/download/v{{site.version}}/bootbox.locales.min.js">
@@ -69,10 +80,15 @@ pageKey: gettingStarted
                         </tr>
                         <tr>
                             <td>
+                                Bundled
+                                <p>
+                                    <small class="d-block">Includes bootbox + all locales.</small>
+                                </p>
+                            </td>
+                            <td>
                                 <a href="https://github.com/makeusabrew/bootbox/releases/download/v{{site.version}}/bootbox.all.js">
                                     bootbox.all.js
                                 </a>
-                                <small class="d-block">Includes bootbox + all locales.</small>
                             </td>
                             <td>
                                 <a href="https://github.com/makeusabrew/bootbox/releases/download/v{{site.version}}/bootbox.all.min.js">
@@ -178,8 +194,8 @@ pageKey: gettingStarted
         </h3>
         <div class="page-section-content">
             <p>
-                Once you&rsquo;ve got your <a href="#dependencies">dependencies</a> sorted, usage
-                is fairly straightforward and much like any other JavaScript library you&rsquo;ve
+                Once you've got your <a href="#dependencies">dependencies</a> sorted, usage
+                is fairly straightforward and much like any other JavaScript library you've
                 ever used. The library creates a single global instance of a <samp>bootbox</samp> object:
             </p>
             <pre class="language-html line-numbers mb-4"><code>&lt;!DOCTYPE html&gt;
