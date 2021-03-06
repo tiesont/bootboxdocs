@@ -88,7 +88,7 @@ a
 
 samp
 {
-    color: $secondary;
+    color: $brand-primary;
     font-weight: 600;
     font-family: 'Open Sans', sans-serif;
 }
@@ -187,6 +187,31 @@ a:hover
 .page-wrapper {
     display: flex;
     flex-direction: column;
+}
+
+.page-footer
+{
+    margin-top: 3rem;
+    padding-top: 3rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+
+    .row
+    {
+        .col
+        {
+            text-align: center;
+
+            &:first-child
+            {
+                text-align: left;
+            }
+
+            &:last-child
+            {
+                text-align: right;
+            }
+        }
+    }
 }
 
 .anchorjs-link 

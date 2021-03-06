@@ -1,9 +1,9 @@
 baseurl: ""
-url: "http://bootboxjs.com"
+url: "https://tiesont.github.io/bootbox"
 twitter_username: "@makeusabrew"
 github_username:  "@makeusabrew"
 
-version: 5.4.0
+version: 5.5.2
 versions:
   - v4.x
   - v3.x
