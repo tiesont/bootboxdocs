@@ -28,4 +28,4 @@ After the installer completes, type the following command to build the site and 
 bundle exec jekyll serve --watch
 ```
 
-That's it. Navigate the URL shown in the terminal output, and you should see the current documentation site.
+That's it. Navigate to the URL shown in the terminal output, and you should see the current documentation site.
