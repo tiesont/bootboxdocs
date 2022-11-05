@@ -85,14 +85,14 @@
                         <p class="text-sm">
                             Also applies to: <b>Alert</b>, <b>Prompt</b>, <b>Custom</b>
                         </p>
-                        <div class="form-group">
+                        <div class="form-group mb-2">
                             <label>Choose a locale: </label>
-                            <select id="choose-locale" class="custom-select" style="max-width: 200px;"></select>
+                            <select id="choose-locale" class="form-select" style="max-width: 200px;"></select>
                         </div>
                         <p>
                             <button type="button" class="btn btn-primary example-button" data-bb-example-key="confirm-locale">Run example</button>
                         </p>
-                        <pre class="language-js line-numbers"><code>var locale = $('#choose-locale').val();
+                        <pre class="language-js line-numbers"><code>let locale = $('#choose-locale').val();
     
 bootbox.confirm({
     message: "This confirm uses the selected locale. Were the labels what you expected?",

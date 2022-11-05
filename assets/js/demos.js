@@ -1,8 +1,8 @@
 $(function () {
   try {
-    var locales = Object.keys(bootbox.locales());
-    for (var i = 0; i < locales.length; i++) {
-      var option = $('<option value=""></option>');
+    let locales = Object.keys(bootbox.locales());
+    for (let i = 0; i < locales.length; i++) {
+      let option = $('<option value=""></option>');
       option.attr('value', locales[i]);
       option.html(locales[i]);
 
@@ -16,7 +16,7 @@ $(function () {
     $('.example-button').on('click', function (e) {
       e.preventDefault();
 
-      var key = $(this).data('bb-example-key');
+      let key = $(this).data('bb-example-key');
       if ($.trim(key) != "") {
         switch (key) {
 
@@ -28,7 +28,7 @@ $(function () {
             break;
 
           case 'alert-html-callback':
-            var template = $('#alert-message-template');
+            let template = $('#alert-message-template');
             bootbox.alert(template, function () {
               Example.show('This was logged in the callback!');
             });
@@ -144,10 +144,10 @@ $(function () {
             break;
 
           case 'confirm-locale':
-            var locale = $('#choose-locale').val();
+            let confirmLocale = $('#choose-locale').val();
             bootbox.confirm({
-              message: "This confirm uses the selected locale, <b>" + locale + "</b>. Were the labels what you expected?",
-              locale: locale,
+              message: "This confirm uses the selected locale, <b>" + confirmLocale + "</b>. Were the labels what you expected?",
+              locale: confirmLocale,
               callback: function (result) {
                 Example.show('This was logged in the callback: ' + result);
               }
@@ -174,13 +174,13 @@ $(function () {
             break;
 
           case 'prompt-custom-locale':
-            var locale = {
+            let customLocale = {
               OK: 'I Suppose',
               CONFIRM: 'Go Ahead',
               CANCEL: 'Maybe Not'
             };
 
-            bootbox.addLocale('custom', locale);
+            bootbox.addLocale('custom', customLocale);
 
             bootbox.prompt({
               title: "This is a prompt with a custom locale! What do you think?",
@@ -376,34 +376,34 @@ $(function () {
           /* Custom dialogs */
 
           case 'custom-dialog-as-overlay':
-            var timeout = 3000; // 3 seconds
-            var dialog = bootbox.dialog({
+            let timeout = 3000; // 3 seconds
+            let dialogAsOverlay = bootbox.dialog({
               message: '<p class="text-center mb-0"><i class="fas fa-spin fa-cog"></i> Please wait while we do something...</p>',
               closeButton: false
             });
 
             setTimeout(function () {
-              dialog.modal('hide');
+              dialogAsOverlay.modal('hide');
             }, timeout);
 
             break;
 
           case 'custom-dialog-init':
-            var dialog = bootbox.dialog({
+            let dialogWithInit = bootbox.dialog({
               title: 'A custom dialog with init',
               message: '<p><i class="fas fa-spin fa-spinner"></i> Loading...</p>'
             });
 
-            dialog.init(function () {
+            dialogWithInit.init(function () {
               setTimeout(function () {
-                dialog.find('.bootbox-body').html('I was loaded after the dialog was shown!');
+                dialogWithInit.find('.bootbox-body').html('I was loaded after the dialog was shown!');
               }, 3000);
             });
 
             break;
 
           case 'custom-dialog-with-buttons':
-            var dialog = bootbox.dialog({
+            let dialogWithButtons = bootbox.dialog({
               title: 'A custom dialog with buttons and callbacks',
               message: "<p>This dialog has buttons. Each button has it's own callback function.</p>",
               size: 'large',

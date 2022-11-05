@@ -1,10 +1,10 @@
 
-    var idx;
-    var docs = [];
-    var $searchForm = $('#search-form');
-    var $searchBox = $('#lunrsearch');
-    var $lunrOutput = $('#lunrsearchresults');
-    var $clearBtn = $('<button type="button" class="btn btn-clear"><i class="fas fa-times"></i> Clear results</button>');
+    let idx;
+    let docs = [];
+    let $searchForm = $('#search-form');
+    let $searchBox = $('#lunrsearch');
+    let $lunrOutput = $('#lunrsearchresults');
+    let $clearBtn = $('<button type="button" class="btn btn-clear"><i class="fas fa-times"></i> Clear results</button>');
 
     $(function(){
         $.getJSON('./assets/data/index.json', function(json){
@@ -28,7 +28,7 @@
 
     function lunr_search(term) {
         $lunrOutput.empty();
-        var $output = $('<ul id="search-results"></ul>');
+        let $output = $('<ul id="search-results"></ul>');
 
         if(term) {
             $lunrOutput.html($clearBtn);
@@ -40,20 +40,20 @@
                 $lunrOutput.empty();
             });
             
-            var results = idx.search(term);
+            let results = idx.search(term);
             if(results.length > 0){
                 results.forEach(function (result) {
-                    var doc = docs[result.ref];
+                    let doc = docs[result.ref];
                     if(doc) {
-                        var url = doc.url;
-                        var title = doc.title;
+                        let url = doc.url;
+                        let title = doc.title;
                         
-                        var body;
-                        var key = Object.keys(result.matchData.metadata)[0];
+                        let body;
+                        let key = Object.keys(result.matchData.metadata)[0];
                         if(key) {
-                            var content = result.matchData.metadata[key].body;
+                            let content = result.matchData.metadata[key].body;
                             if(content) {
-                                var pos = content.position[0];
+                                let pos = content.position[0];
                                 body = '&hellip;' + doc.body.substring(pos[0] - 60, pos[0] + pos[1] + 60) + '&hellip;';
                             }
                             else {
@@ -65,7 +65,7 @@
                         }
                         
                         // Highlight matches in snippet
-                        var r = $('<div><span class="body">' + body + '</span></div>').mark(term);
+                        let r = $('<div><span class="body">' + body + '</span></div>').mark(term);
                         $output.append('<li class="lunrsearchresult"><a href="./' + url + '"><span class="title">' + title + '</span>' + r.html() + '<span class="url">' + url + '</span></a></li>');
                     }
                 });

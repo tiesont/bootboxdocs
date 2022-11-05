@@ -15,34 +15,20 @@
         <ol>
             <li><a href="https://github.com/makeusabrew/bootbox/fork">Fork</a> the Bootbox repository.</li>
             <li>Navigate to the <samp>/locales/</samp> directory.</li>
-            <li>Within the <samp>/locales/</samp> directory, create a new JavaScript file named with the IANA code for your language (e.g. 'en-US', 'pt-br').</li>
+            <li>Within the <samp>/locales/</samp> directory, create a new JavaScript file named with the IANA code for your language (e.g. 'en-US', 'pt-BR').</li>
             <li>
                 Copy the template, below, into your new file. Values denoted with brackets (i.e. <samp>{% raw %}{{IANA code}}{% endraw %}</samp>) represent the values you will fill
                 in for this locale.
             </li>
         </ol>
 {% raw %}
-<pre class="language-js line-numbers"><code>// bootbox.js locale configuration
-// locale : {{name of locale / language}}
+<pre class="language-js line-numbers"><code>// locale : {{name of locale / language}}
 // author : {{your name (optional)}}
-
-(function (global, factory) {
-  'use strict';
-  if (typeof define === 'function' && define.amd) {
-    define(['../bootbox'], factory);
-  } else if (typeof module === 'object' && module.exports) {
-    factory(require('../bootbox'));
-  } else {
-    factory(global.bootbox);
-  }
-}(this, function (bootbox) {
-  'use strict';
-  bootbox.addLocale('{{IANA code}}', {
-    OK      : '{{OK text}}',
-    CANCEL  : '{{Cancel text}}',
-    CONFIRM : '{{Confirm text}}'
-  });
-}));</code></pre>
+bootbox.addLocale('{{IANA code}}', {
+  OK      : '{{OK text}}',
+  CANCEL  : '{{Cancel text}}',
+  CONFIRM : '{{Confirm text}}'
+});</code></pre>
 {% endraw %}
         <p>
             <b>Add a unit test for your new locale.</b> Locales without tests are rarely pulled in. To add your test:
@@ -71,14 +57,8 @@
 });</code></pre>
 {% endraw %}
         <p>
-            At this point, you've done the minimum for an acceptable pull-request. You unit test will fail, since the tests are setup to use
-            <samp>bootbox.all.js</samp>, which hasn't been updated yet (we don't have a build process in place yet for aggregating locales).
-            <b>This is okay</b>. We will add your locale to the appropriate files and run the test suite. If your test passes, your pull-request
-            will be merged.
-        </p>
-        <p>
-            If you want to go a bit further (which also makes it more likely your pull-request is merged sooner), add your locale to <samp>bootbox.locales.js</samp>
-            and <samp>bootbox.all.js</samp> before submitting your pull-request.
+          Run <samp>grunt</samp>. This will regenerate the bootbox.locales.js and bootbox.all.js files and run the test suite. If all tests pass, 
+          submit a pull-request; please include a meaningful commit message.
         </p>
     </div>
   </article>

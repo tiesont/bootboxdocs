@@ -1,6 +1,6 @@
 
-var duration = 500;
-var hasPushState = window.history && window.history.pushState;
+let duration = 500;
+let hasPushState = window.history && window.history.pushState;
 
 function removeHash() {
     if (hasPushState) {
@@ -9,14 +9,14 @@ function removeHash() {
 }
 
 function highlightTarget() {
-    var hash = window.location.hash;
-    var pathName = window.location.pathname;
+    let hash = window.location.hash;
+    let pathName = window.location.pathname;
     if (hash) {
         pathName += hash;
     }
 
     // Let's see if we have a matching sidebar link; if so, mark it as active
-    var navLink = $('.nav-link[href=".' + pathName + '"]');
+    let navLink = $('.nav-link[href=".' + pathName + '"]');
     if (navLink.length) {
         $('.nav-link').removeClass('active');
         navLink.addClass('active');
@@ -53,9 +53,9 @@ $(window)
     })
     .on('load', function () {
         // Check for a page anchor (i.e. #somethinghere)
-        var hash = window.location.hash;
+        let hash = window.location.hash;
         if (hash) {
-            var target = $(hash);
+            let target = $(hash);
             if (target) {
                 // If the target exists, scroll it into place (taking into account the header spacing) and set the active nav item
                 if (target.scrollTop() < 75) {
@@ -86,7 +86,7 @@ jQuery(function ($) {
             return false;
         })
         .on('click', 'a[href^="#"]', function (e) {
-            var target = this.hash;
+            let target = this.hash;
             if (target) {
                 if ($(target).length) {
                     e.preventDefault();
@@ -102,11 +102,11 @@ jQuery(function ($) {
             }
         })
         .on('click', '.nav-link', function (e) {
-            var _this = $(this);
-            var url = _this.attr('href').split('#');
+            let _this = $(this);
+            let url = _this.attr('href').split('#');
 
             if(url[0] && url[0].indexOf(window.location.pathname) !== -1) {
-                var target = this.hash;
+                let target = this.hash;
                 if (target) {
                     if ($(target).length) {
                         e.preventDefault();

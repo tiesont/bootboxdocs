@@ -3,8 +3,9 @@ url: "https://tiesont.github.io/bootbox"
 twitter_username: "@makeusabrew"
 github_username:  "@makeusabrew"
 
-version: 5.5.2
+version: 6.0.0
 versions:
+  - v5.x
   - v4.x
   - v3.x
 
