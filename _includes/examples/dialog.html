@@ -47,8 +47,8 @@ dialog.modal('hide');</code></pre>
     message: '&lt;p&gt;&lt;i class="fas fa-spin fa-spinner"&gt;&lt;/i&gt; Loading...&lt;/p&gt;'
 });
 
-dialog.init(function(){
-    setTimeout(function(){
+dialog.init(function() {
+    setTimeout(function() {
         dialog.find('.bootbox-body').html('I was loaded after the dialog was shown!');
     }, 3000);
 });</code></pre>
@@ -75,7 +75,7 @@ dialog.init(function(){
         noclose: {
             label: "I don't close the modal!",
             className: 'btn-warning',
-            callback: function(){
+            callback: function() {
                 console.log('Custom button clicked');
                 return false;
             }
@@ -83,7 +83,7 @@ dialog.init(function(){
         ok: {
             label: "I'm an OK button!",
             className: 'btn-info',
-            callback: function(){
+            callback: function() {
                 console.log('Custom OK clicked');
             }
         }

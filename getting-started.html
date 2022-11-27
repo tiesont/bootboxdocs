@@ -24,7 +24,7 @@ pageKey: gettingStarted
                 </div>
                 <div class="col">
                     <h4><a href="https://cdnjs.com/libraries/bootbox.js">cdnjs</a></h4>
-                    <pre><code class="language-http">https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/{{site.version}}/bootbox.min.js</code></pre>
+                    <pre><code class="language-http">https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/{{site.version}}/bootbox.all.min.js</code></pre>
                 </div>
             </div>
             <p>Or, serve the files yourself:</p>
@@ -134,7 +134,7 @@ pageKey: gettingStarted
                         <td>6.x.x <span class="badge bg-success">Latest</span></td>
                         <td>4.6.1</td>
                         <td>5.x.x</td>
-                        <td>1.9.1</td>
+                        <td>3.5.x <b class="text-danger">**</b></td>
                         <td class="text-center"><i class="fas fa-check text-success"></i></td>
                         <td class="hidden-xs">Current release. Updated to support Bootstrap 5. Retains compatibility with Bootstrap 4.</td>
                     </tr>
@@ -181,7 +181,15 @@ pageKey: gettingStarted
                 </tbody>
                 <tfoot>
                     <tr>
-                        <td colspan="6"><b class="text-danger">*</b> Some options, like <samp>size</samp>, require Bootstrap 3.1.0 or higher.</td>
+                        <td colspan="6">
+                            <p>
+                                <b class="text-danger">*</b> Some options, like <samp>size</samp>, require Bootstrap 3.1.0 or higher.
+                            </p>
+                            <p>
+                                <b class="text-danger">**</b> npm package requires jQuery 3.5.1 or higher. If loading manually, any currently 
+                                supported version of jQuery will work. See <a href="https://releases.jquery.com/">https://releases.jquery.com/</a>
+                            </p>
+                        </td>
                     </tr>
                 </tfoot>
             </table>
@@ -217,22 +225,20 @@ pageKey: gettingStarted
     &lt;link rel="stylesheet" type="text/css" href="bootstrap.min.css"&gt;
 &lt;/head&gt;
 &lt;body&gt;
-
-    &lt;p&gt;Content here. &lt;a class="show-alert" href=#&gt;Alert!&lt;/a&gt;&lt;/p&gt;
+    &lt;p&gt;Content here. &lt;a class="show-alert" href="#"&gt;Alert!&lt;/a&gt;&lt;/p&gt;
 
     &lt;!-- JS dependencies --&gt;
-    &lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"&gt;&lt;/script&gt;
-    &lt;!-- Bootstrap 4 dependency --&gt;
+    &lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"&gt;&lt;/script&gt;
+    &lt;!-- Bootstrap 4+ dependency --&gt;
     &lt;script src="popper.min.js"&gt;&lt;/script&gt;
     &lt;script src="bootstrap.min.js"&gt;&lt;/script&gt;
 
     &lt;!-- bootbox code --&gt;
-    &lt;script src="bootbox.min.js"&gt;&lt;/script&gt;
-    &lt;script src="bootbox.locales.min.js"&gt;&lt;/script&gt;
+    &lt;script src="bootbox.all.min.js"&gt;&lt;/script&gt;
     &lt;script&gt;
-        $(document).on("click", ".show-alert", function(e) {
-            bootbox.alert("Hello world!", function() {
-                console.log("Alert Callback");
+        $(document).on('click', '.show-alert', function(e) {
+            bootbox.alert('Hello world!', function() {
+                console.log('Alert Callback');
             });
         });
     &lt;/script&gt;
@@ -250,7 +256,6 @@ pageKey: gettingStarted
                 <li>Popper.js</li>
                 <li>Bootstrap</li>
                 <li>Bootbox</li>
-                <li>Bootbox Locales (optional - omit if you only need the default English locale)</li>
             </ol>
             <p>
                 When you're up and running, check out some <a href="./examples.html">examples</a>

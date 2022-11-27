@@ -33,22 +33,22 @@
             <a href="./" class="text-no-decoration"><b class="text-brand">Bootbox</b><span class="text-bb-alt text-thin">.js</span></a> &mdash; alert, confirm, prompt, and flexible dialogs for the Bootstrap framework
         </nav>
     </div>
-    <div class="text-right text-nowrap mr-2">          
+    <div class="text-right text-nowrap me-2">          
         <nav class="nav nav-navbar">
-            <a class="nav-item nav-link border-left border-right" href="./getting-started.html">
+            <a class="nav-item nav-link border-start border-end" href="./getting-started.html">
                 Getting Started
             </a>
-            <a class="nav-item nav-link border-right" href="./examples.html">
+            <a class="nav-item nav-link border-end" href="./examples.html">
                 Examples
             </a>
-            <a class="nav-item nav-link border-right" href="./documentation.html">
+            <a class="nav-item nav-link border-end" href="./documentation.html">
                 Docs
             </a>
-            <a class="nav-item nav-link border-right" href="./faq.html">
+            <a class="nav-item nav-link border-end" href="./faq.html">
                 FAQs
             </a>
-            <div class="nav-item dropdown border-right">
-                <a class="nav-link dropdown-toggle" href="#" id="revisions" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <div class="nav-item dropdown border-end">
+                <a class="nav-link dropdown-toggle" href="#" id="revisions" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                     v6.0.0
                 </a>
                 <div class="dropdown-menu" aria-labelledby="revisions">
@@ -62,7 +62,7 @@
                     
                 </div>
               </div>
-            <a class="nav-item nav-link text-dark border-right mr-3" href="https://github.com/makeusabrew/bootbox">
+            <a class="nav-item nav-link text-dark border-right me-3" href="https://github.com/makeusabrew/bootbox">
                 <i class="fab fa-github"></i>
                 GitHub
             </a>
@@ -83,7 +83,8 @@
                         <div class="main-content-inner">
                             <h2 id="intro" class="my-3">Documentation</h2>
 <p class="lead">
-    Currently viewing documentation for version <b>6.0.0</b>. Other versions: <a href="./v4.x/documentation.html">4.x</a> &middot; <a href="./v3.x/documentation.html">3.x</a>
+    Currently viewing documentation for version <b>6.0.0</b>. 
+    Other versions: <a href="./v5.x/documentation.html">5.x</a> &middot; <a href="./v4.x/documentation.html">4.x</a> &middot; <a href="./v3.x/documentation.html">3.x</a>
 </p>
 
 <div class="bg-white rounded p-5">
@@ -128,7 +129,7 @@
                     If you have code that should not be evaluated until the user has dismissed the alert
                     (see <a href="#note-non-blocking">Bootbox Limitations</a> below), call it within the callback function:
                 </p>
-                <pre class="language-js line-numbers mb-4"><code>bootbox.alert('Your message here&hellip;', function(){
+                <pre class="language-js line-numbers mb-4"><code>bootbox.alert('Your message here&hellip;', function() {
     /* your callback code */ 
 });</code></pre>
                 <h4 id="alert-formatted-text" class="topic-anchor">Formatted text</h4>
@@ -247,7 +248,7 @@
                     or <samp>false</samp>, depending on which button the user pressed.
                 </p>
                 <div class="bb-example bb-example-modal">
-                    <pre class="language-js line-numbers"><code>bootbox.confirm('Are you sure?', function(result){
+                    <pre class="language-js line-numbers"><code>bootbox.confirm('Are you sure?', function(result) {
     /* your callback code */ 
 });</code></pre>
                     <figure>
@@ -292,7 +293,7 @@
                     <pre class="language-js line-numbers"><code>bootbox.confirm({ 
     size: 'small',
     message: 'Are you sure?',
-    callback: function(result){ /* result is a boolean; true = OK, false = Cancel*/ }
+    callback: function(result) { /* result is a boolean; true = OK, false = Cancel*/ }
 });</code></pre>
                     <figure>
                         <figcaption id="example-bb-5" class="topic-anchor">Example <b>bb.5</b></figcaption>
@@ -346,7 +347,7 @@
                     or dismissed the dialog; otherwise it is passed the value of the text input.
                 </p>
                 <div class="bb-example bb-example-modal">
-                    <pre class="language-js line-numbers"><code>bootbox.prompt('What is your name?', function(result){
+                    <pre class="language-js line-numbers"><code>bootbox.prompt('What is your name?', function(result) {
     /* your callback code */ 
 });</code></pre>
                     <figure>
@@ -395,7 +396,7 @@
                     <pre class="language-js line-numbers"><code>bootbox.prompt({ 
     size: 'small',
     title: 'What is your name?',
-    callback: function(result){ 
+    callback: function(result) { 
         /* result = String containing user input if OK clicked or null if Cancel clicked */ 
     }
 });</code></pre>
@@ -1535,138 +1536,176 @@ DD   = two-digit day of month (01 through 31)
                     <table class="table table-striped table-bordered">
                         <thead>
                             <tr>
-                                <th style="width: 4rem;">Key</th>
-                                <th>Name</th>
-                                <th style="width: 4rem;">Key</th>
+                                <th style="width: 6rem;">Key</th>
                                 <th>Name</th>
                             </tr>
                         </thead>
                         <tbody>
+                            
                             <tr>
-                                <td><code>ar</code></td>
-                                <td>Arabic</td>
-                                <td><code>az</code></td>
-                                <td>Azerbaijani</td>
+                              <th>ar</th><td>Arabic</td>
                             </tr>
+                          
                             <tr>
-                                <td><code>bg-BG</code></td>
-                                <td>Bulgarian</td>
-                                <td><code>pt-BR</code></td>
-                                <td>Portuguese - Brasil</td>
+                              <th>az</th><td>Azerbaijani</td>
                             </tr>
+                          
                             <tr>
-                                <td><code>cs</code></td>
-                                <td>Czech</td>
-                                <td><code>da</code></td>
-                                <td>Danish</td>
+                              <th>bg-BG</th><td>Bulgarian</td>
                             </tr>
+                          
                             <tr>
-                                <td><code>de</code></td>
-                                <td>German</td>
-                                <td><code>el</code></td>
-                                <td>Greek</td>
+                              <th>cs</th><td>Czech</td>
                             </tr>
+                          
                             <tr>
-                                <td><code>en</code></td>
-                                <td>English</td>
-                                <td><code>es</code></td>
-                                <td>Spanish / Español</td>
+                              <th>da</th><td>Danish</td>
                             </tr>
+                          
                             <tr>
-                                <td><code>et</code></td>
-                                <td>Estonian</td>
-                                <td><code>eu</code></td>
-                                <td>Basque</td>
+                              <th>de</th><td>German</td>
                             </tr>
+                          
                             <tr>
-                                <td><code>fa</code></td>
-                                <td>Farsi / Persian</td>
-                                <td><code>fi</code></td>
-                                <td>Finnish</td>
+                              <th>el</th><td>Greek</td>
                             </tr>
+                          
                             <tr>
-                                <td><code>fr</code></td>
-                                <td>French / Français</td>
-                                <td><code>he</code></td>
-                                <td>Hebrew</td>
+                              <th>en</th><td>English</td>
                             </tr>
+                          
                             <tr>
-                                <td><code>hr</code></td>
-                                <td>Croatian</td>
-                                <td><code>hu</code></td>
-                                <td>Hungarian</td>
+                              <th>es</th><td>Spanish / Español</td>
                             </tr>
+                          
                             <tr>
-                                <td><code>id</code></td>
-                                <td>Indonesian</td>
-                                <td><code>it</code></td>
-                                <td>Italian</td>
+                              <th>et</th><td>Estonian</td>
                             </tr>
+                          
                             <tr>
-                                <td><code>ja</code></td>
-                                <td>Japanese</td>
-                                <td><code>ka</code></td>
-                                <td>Georgian</td>
+                              <th>eu</th><td>Basque</td>
                             </tr>
+                          
                             <tr>
-                                <td><code>ko</code></td>
-                                <td>Korean</td>
-                                <td><code>lt</code></td>
-                                <td>Lithuanian</td>
+                              <th>fa</th><td>Farsi / Persian</td>
                             </tr>
+                          
                             <tr>
-                                <td><code>lv</code></td>
-                                <td>Latvian</td>
-                                <td><code>nl</code></td>
-                                <td>Dutch</td>
+                              <th>fi</th><td>Finnish</td>
                             </tr>
+                          
                             <tr>
-                                <td><code>no</code></td>
-                                <td>Norwegian</td>
-                                <td><code>pl</code></td>
-                                <td>Polish</td>
+                              <th>fr</th><td>French / Français</td>
                             </tr>
+                          
                             <tr>
-                                <td><code>pt</code></td>
-                                <td>Portuguese</td>
-                                <td><code>ru</code></td>
-                                <td>Russian</td>
+                              <th>he</th><td>Hebrew</td>
                             </tr>
+                          
                             <tr>
-                                <td><code>sk</code></td>
-                                <td>Slovak</td>
-                                <td><code>sl</code></td>
-                                <td>Slovenian</td>
+                              <th>hr</th><td>Croatian</td>
                             </tr>
+                          
                             <tr>
-                                <td><code>sq</code></td>
-                                <td>Albanian</td>
-                                <td><code>sv</code></td>
-                                <td>Swedish</td>
+                              <th>hu</th><td>Hungarian</td>
                             </tr>
+                          
                             <tr>
-                                <td><code>sw</code></td>
-                                <td>Swahili</td>
-                                <td><code>ta</code></td>
-                                <td>Tamil</td>
+                              <th>id</th><td>Indonesian</td>
                             </tr>
+                          
                             <tr>
-                                <td><code>th</code></td>
-                                <td>Thai</td>
-                                <td><code>tr</code></td>
-                                <td>Turkish</td>
+                              <th>it</th><td>Italian</td>
                             </tr>
+                          
                             <tr>
-                                <td><code>uk</code></td>
-                                <td>Ukrainian</td>
-                                <td colspan="2"</td>
+                              <th>ja</th><td>Japanese</td>
                             </tr>
+                          
                             <tr>
-                                <td><code>zh-CN</code></td>
-                                <td>Chinese (People's Republic of China)</td>
-                                <td><code>zh-TW</code></td>
-                                <td>Chinese (Taiwan / Republic of China)</td>
+                              <th>ka</th><td>Georgian</td>
                             </tr>
+                          
+                            <tr>
+                              <th>ko</th><td>Korean</td>
+                            </tr>
+                          
+                            <tr>
+                              <th>lt</th><td>Lithuanian</td>
+                            </tr>
+                          
+                            <tr>
+                              <th>lv</th><td>Latvian</td>
+                            </tr>
+                          
+                            <tr>
+                              <th>nl</th><td>Dutch</td>
+                            </tr>
+                          
+                            <tr>
+                              <th>no</th><td>Norwegian</td>
+                            </tr>
+                          
+                            <tr>
+                              <th>pl</th><td>Polish</td>
+                            </tr>
+                          
+                            <tr>
+                              <th>pt</th><td>Portuguese</td>
+                            </tr>
+                          
+                            <tr>
+                              <th>pt-BR</th><td>Portuguese - Brasil</td>
+                            </tr>
+                          
+                            <tr>
+                              <th>ru</th><td>Russian</td>
+                            </tr>
+                          
+                            <tr>
+                              <th>sk</th><td>Slovak</td>
+                            </tr>
+                          
+                            <tr>
+                              <th>sl</th><td>Slovenian</td>
+                            </tr>
+                          
+                            <tr>
+                              <th>sq</th><td>Albanian</td>
+                            </tr>
+                          
+                            <tr>
+                              <th>sv</th><td>Swedish</td>
+                            </tr>
+                          
+                            <tr>
+                              <th>sw</th><td>Swahili</td>
+                            </tr>
+                          
+                            <tr>
+                              <th>ta</th><td>Tamil</td>
+                            </tr>
+                          
+                            <tr>
+                              <th>th</th><td>Thai</td>
+                            </tr>
+                          
+                            <tr>
+                              <th>tr</th><td>Turkish</td>
+                            </tr>
+                          
+                            <tr>
+                              <th>uk</th><td>Ukrainian</td>
+                            </tr>
+                          
+                            <tr>
+                              <th>zh-CN</th><td>Chinese (People's Republic of China)</td>
+                            </tr>
+                          
+                            <tr>
+                              <th>zh-TW</th><td>Chinese (Taiwan / Republic of China)</td>
+                            </tr>
+                          
                         </tbody>
                     </table>
                 </div>
@@ -1920,7 +1959,7 @@ dialog.init(function(){
                     <p>
                         <b>All</b> Bootstrap modals (and therefore Bootbox modals), unlike native alerts, confirms, or prompts,
                         are
-                        <a href="https://getbootstrap.com/docs/4.4/components/modal/#methods">asynchronous</a>; meaning,
+                        <a href="https://getbootstrap.com/docs/5.2/getting-started/javascript/#asynchronous-functions-and-transitions">asynchronous</a>; meaning,
                         the events which Bootstrap generates are <b>non-blocking</b> events. 
                         <b>
                             Because of this limitation, code that should not be evaluated until a user has dismissed your dialog 
@@ -1938,7 +1977,7 @@ dialog.init(function(){
                 <div class="topic-subsection-content">
                     <p>
                         This is a limitation of the Bootstrap modal plugin, as noted in the
-                        <a href="https://getbootstrap.com/docs/4.4/components/modal/#how-it-works">official Bootstrap documentation</a>.
+                        <a href="https://getbootstrap.com/docs/5.2/components/modal/#how-it-works">official Bootstrap documentation</a>.
                         While it <em>is</em> functionally possible to trigger multiple modals, custom CSS and/or JavaScript
                         code is required for each layer of modal to display properly.
                     </p>
@@ -2160,7 +2199,7 @@ dialog.init(function(){
             </span>
         </a>
     </div>
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.2.2/anchor.min.js" integrity="sha256-E4RlfxwyJVmkkk0szw7LYJxuPlp6evtPSBDlWHsYYL8=" crossorigin="anonymous"></script>
